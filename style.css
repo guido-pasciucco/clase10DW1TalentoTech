@@ -1,0 +1,133 @@
+header {
+    display: flex; /* activamos flexbox 1 */
+    flex-direction: row; /* Definimos que trabajamos sobre el eje horizontal */
+    justify-content: space-between; /* Definimos el orden de los hijos del contenedor */
+    align-items: center; /* Los alineamos en el centro */
+    background-color: #D0D3D4CC; /* Definimos color de fondo */
+    padding: 20px; /* Espacio en blanco interno al border */
+}
+
+nav ul{
+    list-style: none; /* borrar el circulo negro del item de la lista */
+    display: flex; /* activamos flexbox 2 (solo para los items de la lista) */
+    flex-direction: row;/* Definimos que trabajamos sobre el eje horizontal */
+}
+nav ul li{
+    margin-right: 20px;
+}
+
+/* Los links de mi navbar, por default, son de color negro */
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+/* CUANDO EL USER SE APOYE CON EL MOUSE EN UN LINK DE MI NAVBAR... */
+nav ul li a:hover{
+    /* SE VA A PINTAR DE COLOR ROJO. */
+    color: tomato;
+
+}
+
+
+
+.hijo {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: bisque;
+    text-align: center;
+}
+
+#contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width:400px){
+    /*
+    SOLO AGREGAMOS LAS PROPIEDADES QUE VAN A CAMBIAR
+    LAS QUE SE MANTIENEN IGUAL NO SE AGREGAN POR SEGUNDA VEZ
+    PARA EVITAR CODIGO REPETITIVO / DUPLICADO
+    */
+    nav{
+        margin-top: 20px;
+    }
+    nav ul{
+        flex-direction: column;
+    }
+    nav ul li{
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* 
+
+anidar selectores
+
+nav ul li 
+- las etiquetas li, dentro de etiquetas ul, dentro de etiquetas nav
+- "los items en la lista desordenada de mi barra de navegación"
+
+.contenedor .card .titulo
+- los elementos con clase titulo, dentro de los elementos con clase card, dentro de los elementos con clase contenedor.
+
+misma regla de estilo para distintos selectores
+
+nav, ul, li 
+a las etiquetas nav, a las ul y a las li, aplicales esto (sin importar su anidación)
+
+antes
+    nav{
+        margin-top: 20px;
+    }
+    ul{
+        margin-top: 20px;
+    }
+    li{
+        margin-top: 20px;
+    }
+
+ahora
+    nav, ul, li{
+        margin-top: 20px;
+    }
+
+bootstrap
+- componentes frontend (card, carrousel, modal, navbar)
+- grid 
+
+Visto - Animaciones y transiciones 
+
+
+
+Git y Github 
+
+GIT - SISTEMA DE CONTROL DE VERSIONES
+- descargarlo e instalarlo
+-1 abrir un repositorio LOCAL en nuestro proyecto (git init)
+-2 ir subiendo los archivos iniciales de mi repo (git add y git commit)
+-3 crear el repo virtual en github (desde github)
+-4 vincular el repo local con el virtual (git push)
+
+GITHUB
+- PLATAFORMA / "RED SOCIAL" DE PROGRMADORES - REPOSITORIO VIRTUAL
+- PORTAFOLIO, MOSTRAR TU TRABAJO.
+- nos hacemos una cuenta - perfil social como developer
+
+
+
+
+
+
+
+CODIGO CSS / REGLAS DE ESTILO - ATADAS A CONDICIONES
+MEDIA QUERY - ATADO A LA CONDICIÓN DEL ANCHO DE PANTALLA
+    - Javacsript /Python/Java - DW2 - Condicionales
+PSEUDOCLASS - ATADO A DETERMINADA ACCIÓN DEL USUARIO - HOVER (APOYARSE CON EL MOUSE EN X ELEMENTO)
+    - Javascript - DW2 - Eventos 
+*/
